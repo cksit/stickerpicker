@@ -1,1 +1,13 @@
-{"packs":["lihkg_pig_ani_px.json","MrnMrsMoon.json","LIHKGDogAnimatedUnofficial.json","LIHKGLomoreAnimated.json"],"homeserver_url":"https://matrix.cksit.synology.me"}
+{
+  "packs": [
+    "lihkg_pig_ani_px.json",
+    "MrnMrsMoon.json",
+    "LIHKGDogAnimatedUnofficial.json",
+    "LIHKGLomoreAnimated.json",
+    "line_s_24283_87a565_by_moe_sticker_bot.json",
+    "line_s159122065200_by_moe_sticker_bot.json",
+    "line_s_ani_19145.json",
+    "line_s_ani_23557.json"
+  ],
+  "homeserver_url": "https://matrix.cksit.synology.me"
+}
