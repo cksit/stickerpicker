@@ -1,9 +1,9 @@
 {
   "packs": [
     "emotes.json",
-    "LIHKGDogAnimatedUnofficial",
-    "lisaddd_by_fStikBot",
-    "Orangoutang"
+    "LIHKGDogAnimatedUnofficial.json",
+    "lisaddd_by_fStikBot.json",
+    "Orangoutang.json"
   ],
   "homeserver_url": "https://matrix.cksit.synology.me"
 }
