@@ -253,10 +253,8 @@ class App extends Component {
 		this.sectionObserver.disconnect()
 	}
 
-	sendSticker(evt) {
-		const id = evt.currentTarget.getAttribute("data-sticker-id")
-		const sticker = this.stickersByID.get(id)
-		frequent.add(id)
+	sendSticker(sticker) {
+		frequent.add(sticker.id)
 		this.updateFrequentlyUsed()
 		widgetAPI.sendSticker(sticker)
 	}
@@ -348,15 +346,15 @@ const Pack = ({ pack, send }) => html`
 		<h1>${pack.title}</h1>
 		<div class="sticker-list">
 			${pack.stickers.map(sticker => html`
-				<${Sticker} key=${sticker.id} content=${sticker} send=${send}/>
+				<${Sticker} key=${sticker.id} sticker=${sticker} send=${send}/>
 			`)}
 		</div>
 	</section>
 `
 
-const Sticker = ({ content, send }) => html`
-	<div class="sticker" onClick=${send} data-sticker-id=${content.id}>
-		<img data-src=${makeThumbnailURL(content.url)} alt=${content.body} title=${content.body} />
+const Sticker = ({ sticker, send }) => html`
+	<div class="sticker" onClick=${() => send(sticker)}>
+		<img data-src=${makeThumbnailURL(sticker.url)} alt=${sticker.body} title=${sticker.body} />
 	</div>
 `
 
